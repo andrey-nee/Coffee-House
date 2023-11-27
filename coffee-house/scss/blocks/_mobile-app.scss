@@ -1,0 +1,33 @@
+.mobile-app {
+  margin-bottom: 100px;
+}
+.mobile-app__container {
+  display: flex;
+  column-gap: 100px;
+}
+.mobile-app__title {
+}
+.mobile-app__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+.mobile-app__subtitle {
+  margin: 0 0 40px;
+
+  span {
+    color: $txt-accent;
+  }
+}
+.mobile-app__description {
+  margin: 0 0 40px;
+}
+.mobile-app__action {
+  display: flex;
+  column-gap: 20px;
+}
+.mobile-app__button {
+}
+.mobile-app__image {
+}

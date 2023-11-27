@@ -126,6 +126,10 @@
   background-color: #e1d4c9;
 }
 
+.favorite-coffee {
+  margin-bottom: 100px;
+}
+
 .favorite-coffee__container {
   display: flex;
   flex-direction: column;
@@ -221,6 +225,49 @@
 
 .pagination__page__current {
   background-color: #665f55;
+}
+
+.about {
+  margin-bottom: 100px;
+}
+
+.about__subtitle {
+  margin: 0 0 40px;
+}
+.about__subtitle span {
+  color: #b0907a;
+}
+
+.about__gallery {
+  display: flex;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+
+.about__column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.about__image {
+  display: flex;
+  width: 660px;
+  height: 590px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.about__image img {
+  display: flex;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.about__image__small {
+  width: 660px;
+  height: 430px;
 }
 
 img {

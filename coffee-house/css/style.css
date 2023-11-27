@@ -13,6 +13,7 @@
   font-display: swap;
 }
 .page {
+  height: 100%;
   font-family: "Inter", "Arial", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -24,7 +25,57 @@
   display: grid;
   align-content: start;
   grid-template-rows: min-content 1fr min-content;
+  height: 100%;
   margin: 0;
+  padding: 20px 40px 40px;
+  box-sizing: border-box;
+  background-color: #e1d4c9;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.header__link {
+  position: relative;
+  padding-right: 28px;
+  text-decoration: none;
+  color: #403f3d;
+}
+.header__link img {
+  display: flex;
+}
+.header__link::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  height: 20px;
+  width: 20px;
+  background-image: url("../icon/icon-coffee-cup.svg");
+}
+
+.main-nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.main-nav__link {
+  text-decoration: none;
+  color: #403f3d;
 }
 
 img {

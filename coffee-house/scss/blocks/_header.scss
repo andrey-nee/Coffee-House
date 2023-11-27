@@ -10,15 +10,18 @@
 .header__logo {
 }
 .header__link {
-  position: relative;
-  padding-right: 28px;
   text-decoration: none;
   color: $txt-dark;
-
+  
   img {
     display: flex;
   }
-
+  
+}
+.header__link__menu {
+  position: relative;
+  padding-right: 28px;
+  
   &::after {
     position: absolute;
     content: '';

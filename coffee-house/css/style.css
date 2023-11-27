@@ -78,6 +78,49 @@
   color: #403f3d;
 }
 
+.home-page__container {
+  position: relative;
+  height: 644px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.home-page__video {
+  width: 100%;
+  height: auto;
+  max-width: 1360px;
+}
+
+.home-page__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 100px;
+  width: 40%;
+}
+
+.home-page__slogan {
+  margin: 0 0 40px;
+  color: #e1d4c9;
+}
+.home-page__slogan span {
+  color: #b0907a;
+}
+
+.home-page__text {
+  margin: 0 0 40px;
+  color: #e1d4c9;
+}
+
+.home-page__link {
+  display: inline-block;
+  padding: 20px 78px;
+  border-radius: 100px;
+  text-decoration: none;
+  color: #403f3d;
+  background-color: #e1d4c9;
+}
+
 img {
   height: auto;
 }

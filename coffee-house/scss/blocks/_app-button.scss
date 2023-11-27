@@ -1,0 +1,28 @@
+.app-button {
+}
+.app-button__link {
+  display: flex;
+  column-gap: 8px;
+  padding: 12px 20px;
+  width: 200px;
+  height: 64px;
+  border: 1px solid $txt-dark;
+  box-sizing: border-box;
+  border-radius: 100px;
+  text-decoration: none;
+  color: $txt-dark
+}
+.app-button__link__app-store {
+}
+.app-button__icon {
+}
+.app-button__button-container {
+  display: flex;
+  flex-direction: column;
+}
+.app-button__text-top {
+}
+.app-button__text-bottom {
+}
+.app-button__link__google-play {
+}

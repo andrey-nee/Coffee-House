@@ -1,0 +1,39 @@
+.about {
+  margin-bottom: 100px;
+}
+.about__container {
+}
+.about__title {
+}
+.about__subtitle {
+  margin: 0 0 40px;
+  span {
+    color: $txt-accent;
+  }
+}
+.about__gallery {
+  display: flex;
+  column-gap: 40px;
+}
+.about__column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.about__image {
+  display: flex;
+  width: 660px;
+  height: 590px;
+  border-radius: 20px;
+  overflow: hidden;
+  
+  img {
+    display: flex;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+.about__image__small {
+  width: 660px;
+  height: 430px;
+}

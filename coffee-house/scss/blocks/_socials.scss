@@ -1,0 +1,20 @@
+.socials {
+}
+.socials__list {
+  display: flex;
+  column-gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.socials__item {
+}
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid $brd-light;
+  border-radius: 100px;
+}

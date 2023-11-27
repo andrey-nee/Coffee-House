@@ -1,0 +1,26 @@
+.slide {
+  margin-bottom: 40px;
+}
+.slide__container {
+  max-width: 480px;
+}
+.slide__image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.slide__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slide__title {
+  margin: 0 0 16px;
+}
+.slide__description {
+  margin: 0 0 16px;
+  text-align: center;
+}
+.slide__price {
+  margin: 0;
+}

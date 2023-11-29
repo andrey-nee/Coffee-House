@@ -11,37 +11,28 @@
   &:not(:last-child) {
     margin: 0 0 18px;
   }
-}
-.contacts__link__location {
+
   &::after {
     position: absolute;
     content: '';
-    top: 0;
+    top: -4px;
     left: 0;
     width: 20px;
     height: 20px;
+  }
+}
+.contacts__link__location {
+  &::after {
     background-image: url('../icon/icon-contacts-pin-alt.svg');
   }
 }
 .contacts__link__phone {
   &::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
     background-image: url('../icon/icon-contacts-phone.svg');
   }
 }
 .contacts__link__work-time {
   &::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
     background-image: url('../icon/icon-contacts-clock.svg');
   }
 }

@@ -20,6 +20,7 @@
   font-weight: 400;
   line-height: 1.5;
   color: #403f3d;
+  scroll-behavior: smooth;
 }
 
 .page__body {
@@ -28,7 +29,7 @@
   grid-template-rows: min-content 1fr min-content;
   height: 100%;
   margin: 0;
-  padding: 20px 40px 40px;
+  padding: 20px 40px 0;
   box-sizing: border-box;
   background-color: #e1d4c9;
 }
@@ -121,12 +122,31 @@
 }
 
 .home-page__link {
+  position: relative;
   display: inline-block;
   padding: 20px 78px;
   border-radius: 100px;
   text-decoration: none;
   color: #403f3d;
   background-color: #e1d4c9;
+  transition: padding 0.3s ease;
+}
+.home-page__link::after {
+  position: absolute;
+  content: "";
+  top: 22px;
+  right: 66px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../icon/icon-coffee-cup.svg");
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.home-page__link:hover {
+  padding: 20px 92px 20px 64px;
+}
+.home-page__link:hover::after {
+  opacity: 1;
 }
 
 .favorite-coffee {
@@ -159,7 +179,7 @@
 
 .slider__controls {
   position: absolute;
-  top: 50%;
+  top: 47.5%;
   left: 0;
   right: 0;
   display: flex;
@@ -167,8 +187,7 @@
   transform: translate(0, -50%);
 }
 
-.silder__control-left,
-.silder__control-right {
+.silder__control {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,6 +195,14 @@
   height: 60px;
   border: 1px solid #665f55;
   border-radius: 100px;
+  transition: all 0.3s ease;
+}
+.silder__control:hover {
+  background-color: #665f55;
+}
+.silder__control:hover path {
+  stroke: #c1b6ad;
+  transition: all 0.3s ease;
 }
 
 .slider__pagination {
@@ -194,6 +221,8 @@
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  width: 480px;
+  height: 480px;
 }
 
 .slide__content {
@@ -266,6 +295,11 @@
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  scale: 1.1;
+  transition: all 0.3s ease;
+}
+.about__image img:hover {
+  scale: 1;
 }
 
 .about__image__small {
@@ -307,6 +341,11 @@
        column-gap: 20px;
 }
 
+.mobile-app__image {
+  width: 630px;
+  height: 630px;
+}
+
 .app-button__link {
   display: flex;
   -moz-column-gap: 8px;
@@ -314,11 +353,20 @@
   padding: 12px 20px;
   width: 200px;
   height: 64px;
-  border: 1px solid #403f3d;
+  border: 1px solid #665f55;
   box-sizing: border-box;
   border-radius: 100px;
   text-decoration: none;
   color: #403f3d;
+  transition: all 0.3s ease;
+}
+.app-button__link:hover {
+  color: #e1d4c9;
+  background-color: #665f55;
+}
+.app-button__link:hover path {
+  fill: #c1b6ad;
+  transition: all 0.3s ease;
 }
 
 .app-button__button-container {
@@ -373,52 +421,166 @@
   height: 60px;
   border: 1px solid #c1b6ad;
   border-radius: 100px;
+  transition: all 0.3s ease;
 }
-
-.contacts__location {
-  margin: 0 0 16px;
+.socials__link:hover {
+  background-color: #e1d4c9;
+}
+.socials__link:hover path {
+  stroke: #403f3d;
+  transition: all 0.3s ease;
 }
 
 .contacts__link {
   position: relative;
-  display: flex;
   padding-left: 28px;
   color: #e1d4c9;
   text-decoration: none;
 }
-
-.contacts__link__location::before {
+.contacts__link:not(:last-child) {
+  margin: 0 0 18px;
+}
+.contacts__link::after {
   position: absolute;
   content: "";
-  top: 0;
+  top: -4px;
   left: 0;
   width: 20px;
   height: 20px;
+}
+
+.contacts__link__location::after {
   background-image: url("../icon/icon-contacts-pin-alt.svg");
 }
 
-.contacts__link__phone::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
+.contacts__link__phone::after {
   background-image: url("../icon/icon-contacts-phone.svg");
 }
 
-.contacts__link__work-time::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
+.contacts__link__work-time::after {
   background-image: url("../icon/icon-contacts-clock.svg");
 }
 
-.contacts__phone {
-  margin: 0 0 16px;
+.menu-page {
+  margin-bottom: 100px;
+}
+
+.menu-page__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-page__subtitle {
+  margin: 0 0 40px;
+  max-width: 800px;
+  text-align: center;
+}
+.menu-page__subtitle span {
+  color: #b0907a;
+}
+
+.menu-page__filter {
+  display: flex;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  margin-bottom: 40px;
+}
+
+.menu__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.menu-item {
+  overflow: hidden;
+  outline: 1px solid #c1b6ad;
+  border-radius: 40px;
+}
+.menu-item:hover > .menu-item__image img {
+  scale: 1;
+}
+
+.menu-item__image {
+  width: 310px;
+  height: 310px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.menu-item__image img {
+  display: flex;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  scale: 1.1;
+  transition: all 0.3s ease;
+}
+
+.menu-item__info {
+  padding: 20px;
+}
+
+.menu-item__title {
+  margin: 0 0 12px;
+}
+
+.menu-item__description {
+  height: 72px;
+  margin: 0 0 12px;
+}
+
+.menu-item__price {
+  margin: 0;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  padding: 8px 16px 8px 8px;
+  border: 1px solid #c1b6ad;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+}
+.tag__current {
+  border: 1px solid #665f55;
+  background-color: #665f55;
+}
+.tag:not(.tag__current) {
+  cursor: pointer;
+}
+.tag:not(.tag__current):hover {
+  border: 1px solid #665f55;
+  background-color: #665f55;
+}
+.tag:not(.tag__current):hover > .tag__icon {
+  background-color: #e1d4c9;
+}
+.tag:not(.tag__current):hover > .tag__text {
+  color: #e1d4c9;
+}
+
+.tag__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  background-color: #c1b6ad;
+}
+.tag__icon__current {
+  background-color: #e1d4c9;
+}
+
+.tag__text {
+  margin: 0;
+}
+.tag__text__current {
+  color: #e1d4c9;
 }
 
 img {
@@ -442,6 +604,7 @@ img {
 .wrapper {
   margin: 0 auto;
   max-width: 1440px;
+  min-width: 1440px;
 }
 
 .text-h1 {
@@ -521,4 +684,26 @@ img {
   font-style: normal;
   font-weight: 600;
   line-height: 1.25;
+}
+
+.hover-link {
+  position: relative;
+}
+.hover-link::before {
+  position: absolute;
+  display: block;
+  content: "";
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #665f55;
+  transform: scaleX(0);
+  transition: all 0.2s ease;
+}
+.hover-link:hover::before {
+  transform: scaleX(1);
+}
+.hover-link__light::before {
+  background-color: #c1b6ad;
 }/*# sourceMappingURL=style.css.map */

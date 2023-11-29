@@ -19,6 +19,7 @@ img {
 .wrapper {
   margin: 0 auto;
   max-width: 1440px;
+  min-width: 1440px;
 }
 
 // Typography
@@ -98,4 +99,31 @@ img {
   font-style: normal;
   font-weight: 600;
   line-height: 1.25;
+}
+
+.hover-link {
+  position: relative;
+  
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: $brd-dark;
+    transform: scaleX(0);
+    transition: all 0.2s ease;
+    
+  }
+  &:hover::before {
+    transform: scaleX(1);
+  }
+  
+  &__light {
+    &::before {
+      background-color: $brd-light;
+    }
+  }
 }

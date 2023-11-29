@@ -1,50 +1,42 @@
 .contacts {
 }
 .contacts__location {
-  margin: 0 0 16px;
 }
 .contacts__link {
   position: relative;
-  display: flex;
   padding-left: 28px;
   color: $txt-light;
   text-decoration: none;
-}
-.contacts__link__location {
-  &::before {
+  
+  &:not(:last-child) {
+    margin: 0 0 18px;
+  }
+
+  &::after {
     position: absolute;
     content: '';
-    top: 0;
+    top: -4px;
     left: 0;
     width: 20px;
     height: 20px;
+  }
+}
+.contacts__link__location {
+  &::after {
     background-image: url('../icon/icon-contacts-pin-alt.svg');
   }
 }
 .contacts__link__phone {
-  &::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
+  &::after {
     background-image: url('../icon/icon-contacts-phone.svg');
   }
 }
 .contacts__link__work-time {
-  &::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
+  &::after {
     background-image: url('../icon/icon-contacts-clock.svg');
   }
 }
 .contacts__phone {
-  margin: 0 0 16px;
 }
 .contacts__work-time {
 }

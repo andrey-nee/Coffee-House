@@ -6,6 +6,7 @@
   font-weight: 400;
   line-height: 1.5;
   color: $txt-dark;
+  scroll-behavior: smooth;
 }
 
 .page__body {
@@ -14,7 +15,7 @@
   grid-template-rows: min-content 1fr min-content;
   height: 100%;
   margin: 0;
-  padding: 20px 40px 40px;
+  padding: 20px 40px 0;
   box-sizing: border-box;
   background-color: $bg-body;
 }

@@ -6,11 +6,22 @@
   padding: 12px 20px;
   width: 200px;
   height: 64px;
-  border: 1px solid $txt-dark;
+  border: 1px solid $brd-dark;
   box-sizing: border-box;
   border-radius: 100px;
   text-decoration: none;
-  color: $txt-dark
+  color: $txt-dark;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: $txt-light;
+    background-color: $brd-dark;
+    
+    path {
+      fill: $brd-light;
+      transition: all 0.3s ease;
+    }
+  }
 }
 .app-button__link__app-store {
 }

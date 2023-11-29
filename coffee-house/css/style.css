@@ -353,11 +353,20 @@
   padding: 12px 20px;
   width: 200px;
   height: 64px;
-  border: 1px solid #403f3d;
+  border: 1px solid #665f55;
   box-sizing: border-box;
   border-radius: 100px;
   text-decoration: none;
   color: #403f3d;
+  transition: all 0.3s ease;
+}
+.app-button__link:hover {
+  color: #e1d4c9;
+  background-color: #665f55;
+}
+.app-button__link:hover path {
+  fill: #c1b6ad;
+  transition: all 0.3s ease;
 }
 
 .app-button__button-container {

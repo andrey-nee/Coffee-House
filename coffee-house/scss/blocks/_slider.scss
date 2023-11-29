@@ -18,8 +18,7 @@
   justify-content: space-between;
   transform: translate(0, -50%);
 }
-.silder__control-left,
-.silder__control-right {
+.silder__control {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,6 +26,16 @@
   height: 60px;
   border: 1px solid $brd-dark;
   border-radius: 100px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $brd-dark;
+
+    path {
+      stroke: $brd-light;
+      transition: all 0.3s ease;
+    }
+  }
 }
 .silder__control-left {
 }

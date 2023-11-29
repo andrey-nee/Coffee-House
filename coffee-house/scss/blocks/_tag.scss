@@ -1,0 +1,29 @@
+.tag {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  padding: 8px 16px 8px 8px;
+  border: 1px solid $brd-light;
+  border-radius: 100px;
+  
+  &__current {
+    border: 1px solid $brd-dark;
+    background-color: $bg-container;
+  }
+}
+.tag__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  background-color: $brd-light;
+  
+  &__current {
+    background-color: $bg-body;
+  }
+}
+.tag__text {
+  margin: 0;
+}

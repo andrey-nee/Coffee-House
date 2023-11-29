@@ -1,0 +1,41 @@
+.menu {
+}
+.menu__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+.menu__item {
+}
+.menu-item {
+  overflow: hidden;
+  outline: 1px solid $brd-light;
+  border-radius: 40px;
+}
+.menu-item__coffee {
+}
+.menu-item__image {
+  width: 310px;
+  height: 310px;
+  border-radius: 40px;
+  overflow: hidden;
+
+  img {
+    display: flex;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+.menu-item__info {
+  padding: 20px;
+}
+.menu-item__title {
+  margin: 0 0 12px;
+}
+.menu-item__description {
+  height: 72px;
+  margin: 0 0 12px;
+}
+.menu-item__price {
+  margin: 0;
+}

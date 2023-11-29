@@ -44,11 +44,26 @@
       <section class="main-content__menu-page menu-page">
         <div class="menu-page__container">
           <h1 class="menu-page__title visually-hidden">Menu page</h1>
-          <p class="menu-page__subtitle text-h1">Behind each of our cups hides an <span class="text-accent">amazing surprise</span></p>
+          <p class="menu-page__subtitle text-h2">Behind each of our cups hides an <span class="text-accent">amazing surprise</span></p>
           <div class="menu-page__filter">
-            <p class="menu-page__tag menu-page__tag__coffee text-button">Coffee</p>
-            <p class="menu-page__tag menu-page__tag__tea text-button">Tea</p>
-            <p class="menu-page__tag menu-page__tag__dessert text-button">Dessert</p>
+            <div class="menu-page__tag menu-page__tag__coffee tag tag__current">
+              <div class="tag__icon tag__icon__current">
+                <img src="./icon/icon-tabs-coffee.png" alt="">
+              </div>
+              <p class="tag__text text-button">Coffee</p>
+            </div>
+            <div class="menu-page__tag menu-page__tag__tea tag">
+              <div class="tag__icon">
+                <img src="./icon/icon-tabs-tea.png" alt="">
+              </div>
+              <p class="tag__text text-button">Tea</p>
+            </div>
+            <div class="menu-page__tag menu-page__tag__dessert tag">
+              <div class="tag__icon">
+                <img src="./icon/icon-tabs-dessert.png" alt="">
+              </div>
+              <p class="tag__text text-button">Dessert</p>
+            </div>
           </div>
           <div class="menu-page__menu menu">
             <div class="menu__container">
@@ -59,8 +74,10 @@
                 </div>
                 <div class="menu-item__info">
                   <h3 class="menu-item__title text-h3">Irish coffee</h3>
-                  <p class="menu-item__description text-medium">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-                  <p class="menu-item__price text-h3">$7.00</p>
+                  <div class="menu-item__container">
+                    <p class="menu-item__description text-medium">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+                    <p class="menu-item__price text-h3">$7.00</p>
+                  </div>
                 </div>
               </article>
               <article class="menu__item menu-item menu-item__coffee">

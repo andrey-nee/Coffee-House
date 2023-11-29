@@ -34,10 +34,31 @@
 .home-page__button {
 }
 .home-page__link {
+  position: relative;
   display: inline-block;
   padding: 20px 78px;
   border-radius: 100px;
   text-decoration: none;
   color: $txt-dark;
   background-color: $bg-body;
+  transition: padding 0.3s ease;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 22px;
+    right: 66px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../icon/icon-coffee-cup.svg');
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  &:hover {
+    padding: 20px calc(78px + 14px) 20px calc(78px - 14px);
+    &::after {
+    opacity: 1;
+    }
+  }
 }

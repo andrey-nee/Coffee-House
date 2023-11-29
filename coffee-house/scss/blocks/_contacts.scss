@@ -1,7 +1,6 @@
 .contacts {
 }
 .contacts__location {
-  margin: 0 0 16px;
 }
 .contacts__link {
   position: relative;
@@ -9,6 +8,10 @@
   padding-left: 28px;
   color: $txt-light;
   text-decoration: none;
+  
+  &:not(:last-child) {
+    margin: 0 0 18px;
+  }
 }
 .contacts__link__location {
   &::before {
@@ -44,7 +47,6 @@
   }
 }
 .contacts__phone {
-  margin: 0 0 16px;
 }
 .contacts__work-time {
 }

@@ -159,7 +159,7 @@
 
 .slider__controls {
   position: absolute;
-  top: 50%;
+  top: 47.5%;
   left: 0;
   right: 0;
   display: flex;
@@ -194,6 +194,8 @@
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  width: 480px;
+  height: 480px;
 }
 
 .slide__content {
@@ -307,6 +309,11 @@
        column-gap: 20px;
 }
 
+.mobile-app__image {
+  width: 630px;
+  height: 630px;
+}
+
 .app-button__link {
   display: flex;
   -moz-column-gap: 8px;
@@ -375,16 +382,15 @@
   border-radius: 100px;
 }
 
-.contacts__location {
-  margin: 0 0 16px;
-}
-
 .contacts__link {
   position: relative;
   display: flex;
   padding-left: 28px;
   color: #e1d4c9;
   text-decoration: none;
+}
+.contacts__link:not(:last-child) {
+  margin: 0 0 18px;
 }
 
 .contacts__link__location::before {
@@ -415,10 +421,6 @@
   width: 20px;
   height: 20px;
   background-image: url("../icon/icon-contacts-clock.svg");
-}
-
-.contacts__phone {
-  margin: 0 0 16px;
 }
 
 img {

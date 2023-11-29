@@ -4,7 +4,6 @@
 }
 .contacts__link {
   position: relative;
-  display: flex;
   padding-left: 28px;
   color: $txt-light;
   text-decoration: none;
@@ -14,7 +13,7 @@
   }
 }
 .contacts__link__location {
-  &::before {
+  &::after {
     position: absolute;
     content: '';
     top: 0;
@@ -25,7 +24,7 @@
   }
 }
 .contacts__link__phone {
-  &::before {
+  &::after {
     position: absolute;
     content: '';
     top: 0;
@@ -36,7 +35,7 @@
   }
 }
 .contacts__link__work-time {
-  &::before {
+  &::after {
     position: absolute;
     content: '';
     top: 0;

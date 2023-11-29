@@ -1,0 +1,38 @@
+.menu-item {
+  overflow: hidden;
+  outline: 1px solid $brd-light;
+  border-radius: 40px;
+      
+  &:hover > .menu-item__image img {
+    scale: 1;
+  }
+}
+.menu-item__coffee {
+}
+.menu-item__image {
+  width: 310px;
+  height: 310px;
+  border-radius: 40px;
+  overflow: hidden;
+
+  img {
+    display: flex;
+    object-fit: cover;
+    object-position: center;
+    scale: 1.1;
+    transition: all 0.3s ease;
+  }
+}
+.menu-item__info {
+  padding: 20px;
+}
+.menu-item__title {
+  margin: 0 0 12px;
+}
+.menu-item__description {
+  height: 72px;
+  margin: 0 0 12px;
+}
+.menu-item__price {
+  margin: 0;
+}

@@ -421,6 +421,14 @@
   height: 60px;
   border: 1px solid #c1b6ad;
   border-radius: 100px;
+  transition: all 0.3s ease;
+}
+.socials__link:hover {
+  background-color: #e1d4c9;
+}
+.socials__link:hover path {
+  stroke: #403f3d;
+  transition: all 0.3s ease;
 }
 
 .contacts__link {
@@ -540,10 +548,24 @@
   padding: 8px 16px 8px 8px;
   border: 1px solid #c1b6ad;
   border-radius: 100px;
+  transition: all 0.3s ease;
 }
 .tag__current {
   border: 1px solid #665f55;
   background-color: #665f55;
+}
+.tag:not(.tag__current) {
+  cursor: pointer;
+}
+.tag:not(.tag__current):hover {
+  border: 1px solid #665f55;
+  background-color: #665f55;
+}
+.tag:not(.tag__current):hover > .tag__icon {
+  background-color: #e1d4c9;
+}
+.tag:not(.tag__current):hover > .tag__text {
+  color: #e1d4c9;
 }
 
 .tag__icon {
@@ -561,6 +583,9 @@
 
 .tag__text {
   margin: 0;
+}
+.tag__text__current {
+  color: #e1d4c9;
 }
 
 img {

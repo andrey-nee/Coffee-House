@@ -7,10 +7,15 @@
 }
 .menu__item {
 }
+
 .menu-item {
   overflow: hidden;
   outline: 1px solid $brd-light;
   border-radius: 40px;
+      
+  &:hover > .menu-item__image img {
+    scale: 1;
+  }
 }
 .menu-item__coffee {
 }
@@ -24,6 +29,8 @@
     display: flex;
     object-fit: cover;
     object-position: center;
+    scale: 1.1;
+    transition: all 0.3s ease;
   }
 }
 .menu-item__info {

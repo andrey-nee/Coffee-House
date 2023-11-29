@@ -508,6 +508,9 @@
   outline: 1px solid #c1b6ad;
   border-radius: 40px;
 }
+.menu-item:hover > .menu-item__image img {
+  scale: 1;
+}
 
 .menu-item__image {
   width: 310px;
@@ -521,6 +524,8 @@
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  scale: 1.1;
+  transition: all 0.3s ease;
 }
 
 .menu-item__info {

@@ -508,6 +508,7 @@
   overflow: hidden;
   outline: 1px solid #c1b6ad;
   border-radius: 40px;
+  cursor: pointer;
 }
 .menu-item:hover > .menu-item__image img {
   scale: 1;

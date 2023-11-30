@@ -2,6 +2,7 @@
   overflow: hidden;
   outline: 1px solid $brd-light;
   border-radius: 40px;
+  cursor: pointer;
       
   &:hover > .menu-item__image img {
     scale: 1;

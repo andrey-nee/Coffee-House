@@ -395,9 +395,6 @@
 }
 
 .footer__column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 50%;
 }
 
@@ -410,7 +407,7 @@
 }
 
 .footer__subtitle {
-  margin: 0 0 40px;
+  margin: 32px 0 40px;
   color: #e1d4c9;
 }
 
@@ -441,14 +438,18 @@
   transition: all 0.3s ease;
 }
 
+.contacts__paragraph {
+  margin: 0 0 20px;
+}
+.contacts__paragraph:last-child {
+  margin: 0;
+}
+
 .contacts__link {
   position: relative;
   padding-left: 28px;
   color: #e1d4c9;
   text-decoration: none;
-}
-.contacts__link:not(:last-child) {
-  margin: 0 0 18px;
 }
 .contacts__link::after {
   position: absolute;

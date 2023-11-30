@@ -9,9 +9,9 @@
   background-color: $bg-container;
 }
 .footer__column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
   width: 50%;
 }
 .footer__title {
@@ -25,7 +25,7 @@
 .footer__socials {
 }
 .footer__subtitle {
-  margin: 0 0 40px;
+  margin: 32px 0 40px;
   color: $txt-light;
 }
 .footer__contacts {

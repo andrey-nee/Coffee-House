@@ -17,6 +17,18 @@
     display: flex;
   }
   
+  &__current {
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background-color: $brd-dark;
+    }
+  }
 }
 .header__link__menu {
   position: relative;

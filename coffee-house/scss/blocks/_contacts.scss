@@ -1,5 +1,12 @@
 .contacts {
 }
+.contacts__paragraph {
+  margin: 0 0 20px;
+  
+  &:last-child {
+    margin: 0;
+  }
+}
 .contacts__location {
 }
 .contacts__link {
@@ -7,10 +14,6 @@
   padding-left: 28px;
   color: $txt-light;
   text-decoration: none;
-  
-  &:not(:last-child) {
-    margin: 0 0 18px;
-  }
 
   &::after {
     position: absolute;

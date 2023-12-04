@@ -1,6 +1,8 @@
 .main-content {
 }
 .main-content__container {
+  display: flex;
+  flex-direction: column;
 }
 .main-content__home-page {
 }

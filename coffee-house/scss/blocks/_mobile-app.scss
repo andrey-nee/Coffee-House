@@ -30,6 +30,13 @@
 .mobile-app__button {
 }
 .mobile-app__image {
-  width: 630px;
+  width: 100%;
+  max-width: 630px;
   height: 630px;
+    
+  img {
+    display: flex;
+    object-fit: contain;
+    object-position: center;
+  }
 }

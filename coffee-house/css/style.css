@@ -718,12 +718,17 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
 }
+@media (max-width: 1270px) {
+  .menu__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media (max-width: 768px) {
   .menu__container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 600px) {
   .menu__container {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -731,7 +736,8 @@
 
 .menu-item {
   overflow: hidden;
-  width: 310px;
+  width: 100%;
+  max-width: 310px;
   outline: 1px solid #c1b6ad;
   border-radius: 40px;
   cursor: pointer;
@@ -746,8 +752,9 @@
 }
 
 .menu-item__image {
-  width: 310px;
-  height: 310px;
+  width: 100%;
+  height: auto;
+  max-width: 310px;
   border-radius: 40px;
   overflow: hidden;
 }

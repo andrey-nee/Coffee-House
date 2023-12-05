@@ -1,6 +1,7 @@
 .menu-item {
   overflow: hidden;
-  width: 310px;
+  width: 100%;
+  max-width: 310px;
   outline: 1px solid $brd-light;
   border-radius: 40px;
   cursor: pointer;
@@ -18,8 +19,9 @@
 .menu-item__coffee {
 }
 .menu-item__image {
-  width: 310px;
-  height: 310px;
+  width: 100%;
+  height: auto;
+  max-width: 310px;
   border-radius: 40px;
   overflow: hidden;
 

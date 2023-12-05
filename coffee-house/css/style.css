@@ -194,6 +194,11 @@
 .favorite-coffee__subtitle span {
   color: #b0907a;
 }
+@media (max-width: 768px) {
+  .favorite-coffee__subtitle {
+    text-align: center;
+  }
+}
 
 .slider {
   min-width: 100%;

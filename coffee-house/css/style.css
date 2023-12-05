@@ -40,11 +40,34 @@
 
 .header__container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 60px;
 }
 
+.header__logo {
+  width: 100px;
+  height: 60px;
+  min-width: 100px;
+}
+@media (max-width: 768px) {
+  .header__logo__desktop {
+    display: none;
+  }
+}
+.header__logo__tablet {
+  display: none;
+}
+@media (max-width: 768px) {
+  .header__logo__tablet {
+    display: block;
+  }
+}
+
+.header__burger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 .header__link {
   text-decoration: none;
   color: #403f3d;
@@ -75,6 +98,54 @@
   height: 20px;
   width: 20px;
   background-image: url("../icon/icon-coffee-cup.svg");
+}
+
+.burger {
+  position: relative;
+}
+.burger__menu {
+  position: absolute;
+  top: 50%;
+  right: -1px;
+  transform: translateY(-50%);
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  border: 1px solid #665f55;
+}
+@media (max-width: 768px) {
+  .burger__menu {
+    display: block;
+  }
+}
+
+.burger__menu__open::before, .burger__menu__open::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 14px;
+  width: 16px;
+  height: 1.5px;
+  background-color: #403f3d;
+}
+.burger__menu__open::before {
+  top: 17px;
+}
+.burger__menu__open::after {
+  top: 25px;
+}
+
+.burger__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .burger__container {
+    display: none;
+  }
 }
 
 .main-nav__list {

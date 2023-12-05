@@ -1,0 +1,51 @@
+.burger {
+  position: relative;
+  @media (max-width: 768px) {
+    
+  }
+}
+.burger__menu {
+  position: absolute;
+  top: 50%;
+  right: -1px;
+  transform: translateY(-50%);
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  border: 1px solid $brd-dark;
+  
+    @media (max-width: 768px) {
+      display: block;
+    }
+}
+.burger__menu__open {
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 14px;
+    width: 16px;
+    height: 1.5px;
+    background-color: $txt-dark;
+  }
+  &::before {
+    top: 17px;
+  }
+  &::after {
+    top: calc(17px + 8px);
+  }
+}
+.burger__menu__close {
+}
+.burger__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

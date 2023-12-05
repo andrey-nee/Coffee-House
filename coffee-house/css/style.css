@@ -352,6 +352,11 @@
     cursor: auto;
   }
 }
+@media (max-width: 425px) {
+  .silder__control {
+    display: none;
+  }
+}
 
 .slider__pagination {
   display: flex;
@@ -464,6 +469,14 @@
   }
   .about__image img:hover {
     scale: 1.05;
+  }
+}
+@media (max-width: 425px) {
+  .about__image img {
+    scale: 1.25;
+  }
+  .about__image img:hover {
+    scale: 1.25;
   }
 }
 @media (max-width: 768px) {

@@ -25,6 +25,20 @@
     &:hover > .tag__text  {
       color: $bg-body;
     }
+
+    @media (max-width: 768px) {
+      cursor: auto;
+      &:hover {
+        border: 1px solid $brd-light;
+        background-color: transparent;
+        }
+        &:hover > .tag__icon  {
+          background-color: $brd-light;
+        }
+        &:hover > .tag__text  {
+          color: $txt-dark;
+        }
+    }
   }
 }
 .tag__icon {

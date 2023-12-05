@@ -8,12 +8,20 @@
       
   &:hover > .menu-item__image img {
     scale: 1;
+
+    @media (max-width: 768px) {
+      scale: 1.1;
+    }
   }
 
   &__hidden {
     @media (max-width: 768px) {
       display: none;
     }
+  }
+
+  @media (max-width: 768px) {
+    cursor: auto;
   }
 }
 .menu-item__coffee {

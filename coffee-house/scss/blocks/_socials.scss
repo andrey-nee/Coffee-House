@@ -2,7 +2,7 @@
 }
 .socials__list {
   display: flex;
-  column-gap: 12px;
+  column-gap: 10px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -26,5 +26,17 @@
       stroke: $txt-dark;
       transition: all 0.3s ease;
     }
+    
+    @media (max-width: 768px) {
+      background-color: transparent;
+  
+      path {
+        stroke: $txt-light;
+      }
+    }
+  }
+        
+  @media (max-width: 768px) {
+    cursor:auto;
   }
 }

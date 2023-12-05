@@ -26,7 +26,7 @@
   top: 0;
   left: 0;
   padding: 100px;
-  width: 40%;
+  width: 530px;
   
   @media (max-width: 768px) {
     padding: 100px 60px;
@@ -34,7 +34,7 @@
     box-sizing: border-box;
   }
   
-  @media (max-width: 425px) {
+  @media (max-width: 690px) {
     padding: 60px 16px;
   }
 }

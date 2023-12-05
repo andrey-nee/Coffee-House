@@ -9,8 +9,13 @@
 }
 .home-page__video {
   width: 100%;
-  height: auto;
+  height: 644px;
   max-width: 1360px;
+  object-fit: cover;
+  
+  @media (max-width: 380px) {
+    height: 552px;
+  }
 }
 .home-page__content {
   position: absolute;

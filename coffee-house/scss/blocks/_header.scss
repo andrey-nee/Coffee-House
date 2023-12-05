@@ -53,6 +53,10 @@
       background-color: $brd-dark;
     }
   }
+      
+  @media (max-width: 768px) {
+    cursor:auto;
+  }
 }
 .header__link__menu {
   position: relative;

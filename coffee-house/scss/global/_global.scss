@@ -124,13 +124,22 @@ img {
     transition: all 0.2s ease;
     
   }
+
   &:hover::before {
     transform: scaleX(1);
+    
+    @media (max-width: 768px) {
+      transform: scaleX(0);
+    }
   }
   
   &__light {
     &::before {
       background-color: $brd-light;
     }
+  }
+        
+  @media (max-width: 768px) {
+    cursor:auto;
   }
 }

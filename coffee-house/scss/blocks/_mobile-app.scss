@@ -9,6 +9,10 @@
     flex-direction: column;
     row-gap: 100px;
   }
+
+  @media (max-width: 425px) {
+    row-gap: 40px;
+  }
 }
 .mobile-app__title {
 }
@@ -40,6 +44,11 @@
     @media (max-width: 768px) {
       align-self: flex-start;
     }
+    
+    @media (max-width: 425px) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
 }
 .mobile-app__button {
 }
@@ -52,5 +61,9 @@
     display: flex;
     object-fit: contain;
     object-position: center;
+  }
+      
+  @media (max-width: 425px) {
+    height: auto;
   }
 }

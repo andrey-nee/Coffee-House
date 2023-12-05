@@ -461,6 +461,11 @@
     row-gap: 100px;
   }
 }
+@media (max-width: 425px) {
+  .mobile-app__container {
+    row-gap: 40px;
+  }
+}
 
 .mobile-app__column {
   display: flex;
@@ -496,6 +501,12 @@
     align-self: flex-start;
   }
 }
+@media (max-width: 425px) {
+  .mobile-app__action {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
 
 .mobile-app__image {
   width: 100%;
@@ -508,6 +519,11 @@
      object-fit: contain;
   -o-object-position: center;
      object-position: center;
+}
+@media (max-width: 425px) {
+  .mobile-app__image {
+    height: auto;
+  }
 }
 
 .app-button__link {

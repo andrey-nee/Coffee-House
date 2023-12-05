@@ -1,11 +1,18 @@
 .menu-item {
   overflow: hidden;
+  width: 310px;
   outline: 1px solid $brd-light;
   border-radius: 40px;
   cursor: pointer;
       
   &:hover > .menu-item__image img {
     scale: 1;
+  }
+
+  &__hidden {
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }
 .menu-item__coffee {

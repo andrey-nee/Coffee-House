@@ -49,6 +49,10 @@
   @media (max-width: 768px) {
     cursor:auto;
   }
+    
+  @media (max-width: 425px) {
+    display: none;;
+  }
 }
 .silder__control-left {
 }

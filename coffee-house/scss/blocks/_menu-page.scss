@@ -21,6 +21,10 @@
   display: flex;
   column-gap: 16px;
   margin-bottom: 39px; // 40px
+  
+  @media (max-width: 425px) {
+    column-gap: 8px;
+  }
 }
 .menu-page__tag {
 }

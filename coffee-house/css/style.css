@@ -685,6 +685,12 @@
        column-gap: 16px;
   margin-bottom: 39px;
 }
+@media (max-width: 425px) {
+  .menu-page__filter {
+    -moz-column-gap: 8px;
+         column-gap: 8px;
+  }
+}
 
 @media (max-width: 768px) {
   .menu-page__menu {
@@ -715,6 +721,11 @@
 @media (max-width: 768px) {
   .menu__container {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 425px) {
+  .menu__container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

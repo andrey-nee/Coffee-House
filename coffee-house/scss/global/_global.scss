@@ -29,8 +29,12 @@ img {
   font-style: normal;
   font-weight: 600;
   line-height: 1.05;
+  
+  @media (max-width: 768px) {
+    font-size: clamp(42px, 10vw, 72px);
+  }
 
-  @media (max-width: 380px) {
+  @media (max-width: 425px) {
     font-size: 42px;
     line-height: 1.15;
   }
@@ -42,8 +46,12 @@ img {
   font-style: normal;
   font-weight: 600;
   line-height: 1.25;
+  
+  @media (max-width: 768px) {
+    font-size: clamp(32px, 10vw, 60px);
+  }
 
-  @media (max-width: 380px) {
+  @media (max-width: 425px) {
     font-size: 32px;
   }
 }
@@ -116,13 +124,22 @@ img {
     transition: all 0.2s ease;
     
   }
+
   &:hover::before {
     transform: scaleX(1);
+    
+    @media (max-width: 768px) {
+      transform: scaleX(0);
+    }
   }
   
   &__light {
     &::before {
       background-color: $brd-light;
     }
+  }
+        
+  @media (max-width: 768px) {
+    cursor:auto;
   }
 }

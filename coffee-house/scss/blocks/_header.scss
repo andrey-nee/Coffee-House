@@ -3,11 +3,35 @@
 }
 .header__container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 60px;
 }
 .header__logo {
+  width: 100px;
+  height: 60px;
+  min-width: 100px;
+
+  &__desktop {
+        @media (max-width: 768px) {
+          display: none;
+        }
+  }
+  
+  &__tablet {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+}
+.header__burger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @media (max-width: 768px) {
+  }
 }
 .header__link {
   text-decoration: none;
@@ -28,6 +52,10 @@
       height: 2px;
       background-color: $brd-dark;
     }
+  }
+      
+  @media (max-width: 768px) {
+    cursor:auto;
   }
 }
 .header__link__menu {

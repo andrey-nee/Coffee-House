@@ -21,6 +21,19 @@
       fill: $brd-light;
       transition: all 0.3s ease;
     }
+
+    @media (max-width: 768px) {
+      color: $txt-dark;
+      background-color: transparent;
+  
+      path {
+        fill: $txt-dark;
+      }
+    }
+  }
+      
+  @media (max-width: 768px) {
+    cursor:auto;
   }
 }
 .app-button__link__app-store {

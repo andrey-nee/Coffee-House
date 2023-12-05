@@ -27,6 +27,7 @@
   border: 1px solid $brd-dark;
   border-radius: 100px;
   transition: all 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     background-color: $brd-dark;
@@ -35,6 +36,18 @@
       stroke: $brd-light;
       transition: all 0.3s ease;
     }
+
+    @media (max-width: 768px) {
+      background-color: transparent;
+  
+      path {
+        stroke: $txt-dark;
+      }
+    }
+  }
+    
+  @media (max-width: 768px) {
+    cursor:auto;
   }
 }
 .silder__control-left {

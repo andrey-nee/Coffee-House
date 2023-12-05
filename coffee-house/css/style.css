@@ -343,7 +343,7 @@
   margin-bottom: 20px;
   width: 100%;
   max-width: 480px;
-  height: 480px;
+  height: auto;
 }
 
 .slide__content {
@@ -511,7 +511,7 @@
 .mobile-app__image {
   width: 100%;
   max-width: 630px;
-  height: 630px;
+  height: auto;
 }
 .mobile-app__image img {
   display: flex;
@@ -519,11 +519,6 @@
      object-fit: contain;
   -o-object-position: center;
      object-position: center;
-}
-@media (max-width: 425px) {
-  .mobile-app__image {
-    height: auto;
-  }
 }
 
 .app-button__link {

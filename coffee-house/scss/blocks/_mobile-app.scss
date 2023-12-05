@@ -55,15 +55,11 @@
 .mobile-app__image {
   width: 100%;
   max-width: 630px;
-  height: 630px;
+  height: auto;
     
   img {
     display: flex;
     object-fit: contain;
     object-position: center;
-  }
-      
-  @media (max-width: 425px) {
-    height: auto;
   }
 }

@@ -18,4 +18,8 @@
   padding: 20px 40px 0;
   box-sizing: border-box;
   background-color: $bg-body;
+  
+  @media (max-width: 425px) {
+    padding: 20px 16px 0;
+  }
 }

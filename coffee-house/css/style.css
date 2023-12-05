@@ -565,6 +565,12 @@
     padding: 100px 60px;
   }
 }
+@media (max-width: 425px) {
+  .footer__container {
+    row-gap: 40px;
+    padding: 60px 16px;
+  }
+}
 
 .footer__column {
   width: 50%;

@@ -13,6 +13,11 @@
     row-gap: 100px;
     padding: 100px 60px;
   }
+  
+  @media (max-width: 425px) {
+    row-gap: 40px;
+    padding: 60px 16px;
+  }
 }
 .footer__column {
   width: 50%;

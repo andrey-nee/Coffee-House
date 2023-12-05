@@ -461,9 +461,21 @@
   border-radius: 40px;
   background-color: #665f55;
 }
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    row-gap: 100px;
+    padding: 100px 60px;
+  }
+}
 
 .footer__column {
   width: 50%;
+}
+@media (max-width: 768px) {
+  .footer__column {
+    width: 100%;
+  }
 }
 
 .footer__title {
@@ -477,6 +489,11 @@
 .footer__subtitle {
   margin: 32px 0 40px;
   color: #e1d4c9;
+}
+@media (max-width: 768px) {
+  .footer__subtitle {
+    margin: 0 0 38px;
+  }
 }
 
 .socials__list {

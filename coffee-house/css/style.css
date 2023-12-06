@@ -352,7 +352,7 @@
     cursor: auto;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 500px) {
   .silder__control {
     display: none;
   }
@@ -550,7 +550,7 @@
     align-self: flex-start;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 500px) {
   .mobile-app__action {
     flex-direction: column;
     row-gap: 20px;

@@ -121,10 +121,10 @@
   .header__main-nav {
     position: absolute;
     top: 80px;
-    left: 0;
-    right: 0;
+    left: -2px;
+    right: -2px;
     z-index: 3;
-    transform: translateX(-115%);
+    transform: translateX(115%);
     transition: all 0.3s ease;
   }
 }
@@ -137,12 +137,12 @@
   .header__menu {
     position: absolute;
     top: 580px;
-    left: 0;
-    right: 0;
+    left: -2px;
+    right: -2px;
     display: flex;
     justify-content: center;
     z-index: 3;
-    transform: translateX(-115%);
+    transform: translateX(115%);
     transition: all 0.3s ease;
   }
 }

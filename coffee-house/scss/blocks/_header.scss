@@ -73,10 +73,10 @@
   @media (max-width: 768px) {
     position: absolute;
     top: calc(60px + 20px); //Высота Header + отступ
-    left: 0;
-    right: 0;
+    left: -2px;
+    right: -2px;
     z-index: 3;
-    transform: translateX(-115%);
+    transform: translateX(115%);
     transition: all 0.3s ease;
   }
   
@@ -89,12 +89,12 @@
   @media (max-width: 768px) {
     position: absolute;
     top: calc(60px + 20px + 60px + 340px + 100px); // header + margin-header + padding-main-nav + main-nav + padding-main-nav
-    left: 0;
-    right: 0;
+    left: -2px;
+    right: -2px;
     display: flex;
     justify-content: center;
     z-index: 3;
-    transform: translateX(-115%);
+    transform: translateX(115%);
     transition: all 0.3s ease;
     }
   

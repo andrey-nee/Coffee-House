@@ -1,10 +1,4 @@
 .burger {
-  position: relative;
-  @media (max-width: 768px) {
-    
-  }
-}
-.burger__menu {
   position: absolute;
   top: 50%;
   right: -1px;
@@ -19,7 +13,8 @@
       display: block;
     }
 }
-.burger__menu__open {
+
+.burger__open {
   &::before,
   &::after {
     position: absolute;
@@ -37,15 +32,5 @@
     top: calc(17px + 8px);
   }
 }
-.burger__menu__close {
-}
-.burger__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
+.burger__close {
 }

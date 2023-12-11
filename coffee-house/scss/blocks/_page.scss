@@ -22,4 +22,8 @@
   @media (max-width: 425px) {
     padding: 20px 16px 0;
   }
+
+  &.lock {
+    overflow: hidden;
+  }
 }

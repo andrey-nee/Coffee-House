@@ -1,13 +1,27 @@
 .main-nav {
+  @media (max-width: 768px) {
+    padding: 60px 0;
+    height: 100vh;
+    background-color: $bg-body;
+  }
 }
 .main-nav__list {
   display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .main-nav__item:not(:last-child) {
   margin-right: 40px;
+  @media (max-width: 768px) {
+    margin: 0 0 60px;
+  }
 }
 .main-nav__link {
   text-decoration: none;

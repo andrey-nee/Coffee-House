@@ -101,11 +101,13 @@ img {
 }
 
 .text-burger-link {
-  font-family: "Inter", "Arial", sans-serif;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.25;
+  @media (max-width: 768px) {
+    font-family: "Inter", "Arial", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25;
+  }
 }
 
 .hover-link {

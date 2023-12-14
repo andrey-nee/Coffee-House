@@ -67,12 +67,14 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 // Кнопка Load More
 const buttonLoad = document.querySelector('.menu-page__refresh');
-buttonLoad.addEventListener('click', function(event) {
-  // Показываем карточки
-  showCardsMobile();
-  // Прячем кнопку после использования
-  buttonLoad.style.display = 'none';
-})
+if (buttonLoad) {
+  buttonLoad.addEventListener('click', function(event) {
+    // Показываем карточки
+    showCardsMobile();
+    // Прячем кнопку после использования
+    buttonLoad.style.display = 'none';
+  });
+}
 
 
 // Добавление карточек в разметку из JSON

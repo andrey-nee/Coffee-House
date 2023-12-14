@@ -1,0 +1,49 @@
+.button {}
+.button__type__option {
+  position: relative;
+  display: flex;
+  z-index: 2;
+  padding: 8px 16px 8px calc(8px + 30px + 8px);
+  box-sizing: border-box;
+  border-radius: 100px;
+  border: 1px solid $brd-light;
+}
+.button__span {
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  background-color: $brd-light;
+}
+.button__input {
+  &:checked ~ .button__text {
+    color: $txt-light;
+  }
+  &:checked ~ .button__bg {
+    border: 1px solid $bg-container;
+    background-color: $bg-container;
+  }
+  &:checked ~ .button__span {
+    background-color: $bg-body;
+  }
+}
+.button__text {
+  margin: 0;
+  z-index: 2;
+}
+.button__bg {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  z-index: 1;
+  border-radius: 100px;
+  border: 1px solid $brd-light;
+}

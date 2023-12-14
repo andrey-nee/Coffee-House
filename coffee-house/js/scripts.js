@@ -65,6 +65,15 @@ document.addEventListener('DOMContentLoaded', function(event) {
   }
 });
 
+// Кнопка Load More
+const buttonLoad = document.querySelector('.menu-page__refresh');
+buttonLoad.addEventListener('click', function(event) {
+  // Показываем карточки
+  showCardsMobile();
+  // Прячем кнопку после использования
+  buttonLoad.style.display = 'none';
+})
+
 
 // Добавление карточек в разметку из JSON
 function showProducts(filter) {
@@ -84,7 +93,27 @@ function showProducts(filter) {
     `;
     menu.innerHTML += card;
   });
+  // Прячем карточки если их больше 4
+  hideCardsMobile();
 };
+
+function hideCardsMobile() {
+  let menuItems = document.querySelectorAll('.menu-item');
+  if (menuItems.length > 4) {
+    for (let i = 4; i < menuItems.length; i++) {
+      menuItems[i].classList.add('menu-item__hidden');
+    }
+    // Снова показываем кнопку Load More
+    buttonLoad.style.display = '';
+  }
+}
+
+function showCardsMobile() {
+  let menuItems = document.querySelectorAll('.menu-item');
+  for (let i = 0; i < menuItems.length; i++) {
+    menuItems[i].classList.remove('menu-item__hidden');
+  }
+}
 
 function burgerMenuOpen () {
   burger.classList.add('burger__open');

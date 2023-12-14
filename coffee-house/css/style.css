@@ -119,10 +119,10 @@
 
 @media (max-width: 768px) {
   .header__main-nav {
-    position: absolute;
+    position: fixed;
     top: 80px;
-    left: -2px;
-    right: -2px;
+    left: 0;
+    right: 0;
     z-index: 3;
     transform: translateX(115%);
     transition: all 0.3s ease;
@@ -135,10 +135,10 @@
 
 @media (max-width: 768px) {
   .header__menu {
-    position: absolute;
+    position: fixed;
     top: 580px;
-    left: -2px;
-    right: -2px;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     z-index: 3;

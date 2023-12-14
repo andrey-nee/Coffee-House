@@ -71,10 +71,10 @@
 }
 .header__main-nav {
   @media (max-width: 768px) {
-    position: absolute;
+    position: fixed;
     top: calc(60px + 20px); //Высота Header + отступ
-    left: -2px;
-    right: -2px;
+    left: 0;
+    right: 0;
     z-index: 3;
     transform: translateX(115%);
     transition: all 0.3s ease;
@@ -87,10 +87,10 @@
 }
 .header__menu {
   @media (max-width: 768px) {
-    position: absolute;
+    position: fixed;
     top: calc(60px + 20px + 60px + 340px + 100px); // header + margin-header + padding-main-nav + main-nav + padding-main-nav
-    left: -2px;
-    right: -2px;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     z-index: 3;

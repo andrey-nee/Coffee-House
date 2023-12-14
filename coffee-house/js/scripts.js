@@ -1,7 +1,6 @@
 const page = document.getElementById('page-body');
 const menu = document.querySelector('.menu__container');
 
-
 // Открыть/Закрыть меню-бургер
 const burger = document.getElementById('burger');
 const navMain = document.getElementById('main-nav');
@@ -30,36 +29,40 @@ import products from './products.json' assert {type: "json"};
 const productsCoffee = products.filter(item => item.category === "coffee");
 const productsTea = products.filter(item => item.category === "tea");
 const productsDessert = products.filter(item => item.category === "dessert");
+// Показываем карточки при загрузке страницы
 document.addEventListener('DOMContentLoaded', function(event) {
-  // Показываем карточки кофе при загрузке страницы
-  showProducts(productsCoffee);
+  // Проверяем, есть ли на странице блок Menu
+  if (menu) {
+    // Карточки кофе по умолчанию
+    showProducts(productsCoffee);
+    
+    let menuFilter = document.querySelector('.menu-page__filter');
+    let filterTag = menuFilter.querySelectorAll('.tag');
+    
+    // Фильтруем по тегам (coffee/tea/dessert)
+    menuFilter.addEventListener('click', function(event) {
+      let target = event.target.closest('.tag');
+      if (target.classList.contains('tag') && !target.classList.contains('tag__current')) {
+        for (let i = 0; i < filterTag.length; i++) {
+          filterTag[i].classList.remove('tag__current');
+          filterTag[i].querySelector('.tag__icon').classList.remove('tag__icon__current');
+          filterTag[i].querySelector('.tag__text').classList.remove('tag__text__current');
+        }
+        target.classList.add('tag__current')
+        target.querySelector('.tag__icon').classList.add('tag__icon__current')
+        target.querySelector('.tag__text').classList.add('tag__text__current')
   
-  let menuFilter = document.querySelector('.menu-page__filter');
-  let filterTag = menuFilter.querySelectorAll('.tag');
-  
-  // Фильтруем по тегам (coffee/tea/dessert)
-  menuFilter.addEventListener('click', function(event) {
-    let target = event.target.closest('.tag');
-    if (target.classList.contains('tag') && !target.classList.contains('tag__current')) {
-      for (let i = 0; i < filterTag.length; i++) {
-        filterTag[i].classList.remove('tag__current');
-        filterTag[i].querySelector('.tag__icon').classList.remove('tag__icon__current');
-        filterTag[i].querySelector('.tag__text').classList.remove('tag__text__current');
+        // Добавляем карточки по фильтру
+        if (target.classList.contains('menu-page__tag__coffee')) {
+          showProducts(productsCoffee);
+        } else if (target.classList.contains('menu-page__tag__tea')) {
+          showProducts(productsTea);
+        } else if (target.classList.contains('menu-page__tag__dessert')) {
+          showProducts(productsDessert);
+        }
       }
-      target.classList.add('tag__current')
-      target.querySelector('.tag__icon').classList.add('tag__icon__current')
-      target.querySelector('.tag__text').classList.add('tag__text__current')
-
-      // Добавляем карточки по фильтру
-      if (target.classList.contains('menu-page__tag__coffee')) {
-        showProducts(productsCoffee);
-      } else if (target.classList.contains('menu-page__tag__tea')) {
-        showProducts(productsTea);
-      } else if (target.classList.contains('menu-page__tag__dessert')) {
-        showProducts(productsDessert);
-      }
-    }
-  })
+    })
+  }
 });
 
 

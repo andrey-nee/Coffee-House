@@ -1,0 +1,22 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: none;
+}
+.modal__container {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  margin: auto auto;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 40px;
+  background-color: $bg-body;
+}
+.modal__title {
+}
+.modal__item {
+}

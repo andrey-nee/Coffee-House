@@ -97,6 +97,22 @@ if (menu) {
 }
 
 
+// Функции
+
+function burgerMenuOpen () {
+  burger.classList.add('burger__open');
+  navMain.classList.add('active');
+  navMenu.classList.add('active');
+  page.classList.add('lock');
+}
+
+function burgerMenuClose () {
+  burger.classList.remove('burger__open');
+  navMain.classList.remove('active');
+  navMenu.classList.remove('active');
+  page.classList.remove('lock');
+}
+
 // Генерируем модальное окно товара из JSON
 function showModal(itemName) {
   modal.innerHTML = '';
@@ -221,18 +237,4 @@ function showCardsMobile() {
   for (let i = 0; i < menuItems.length; i++) {
     menuItems[i].classList.remove('menu-item__hidden');
   }
-}
-
-function burgerMenuOpen () {
-  burger.classList.add('burger__open');
-  navMain.classList.add('active');
-  navMenu.classList.add('active');
-  page.classList.add('lock');
-}
-
-function burgerMenuClose () {
-  burger.classList.remove('burger__open');
-  navMain.classList.remove('active');
-  navMenu.classList.remove('active');
-  page.classList.remove('lock');
 }

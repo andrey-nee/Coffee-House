@@ -76,6 +76,128 @@ if (buttonLoad) {
   });
 }
 
+// Модальное окно товара
+let modalWrapper = document.querySelector('.modal');
+let modal = document.querySelector('.modal__container');
+// Проверяем, есть ли на странице блок Menu
+if (menu) {
+  menu.addEventListener('click', function(event) {
+    let target = event.target.closest('.menu-item');
+    let itemName = target.querySelector('h3').textContent
+    showModal(itemName);
+    modalOpen();
+  });
+  
+  // Закрываем модалку при клике вне модалки
+  modalWrapper.addEventListener('click', function(event) {
+    if (event.target === modalWrapper) {
+      modalClose();
+    }
+  });
+}
+
+
+// Функции
+
+function burgerMenuOpen () {
+  burger.classList.add('burger__open');
+  navMain.classList.add('active');
+  navMenu.classList.add('active');
+  page.classList.add('lock');
+}
+
+function burgerMenuClose () {
+  burger.classList.remove('burger__open');
+  navMain.classList.remove('active');
+  navMenu.classList.remove('active');
+  page.classList.remove('lock');
+}
+
+// Генерируем модальное окно товара из JSON
+function showModal(itemName) {
+  modal.innerHTML = '';
+  let product = products.find(item => item.name === itemName);
+  const modalContent = `
+  <h2 class="modal__title visually-hidden">Modal menu item</h2>
+  <article class="modal__item modal-item">
+    <div class="modal-item__image">
+      <img src="./img/menu/${product.image}" alt="" width="310" height="310">
+    </div>
+    <form class="modal-item__info">
+      <h3 class="modal-item__title text-h3">${product.name}</h3>
+      <p class="modal-item__description text-medium">${product.description}</p>
+      <div class="modal-item__size">
+        <p class="modal-item__subtitle">Size</p>
+        <div class="modal-item__labels text-button">
+          <label class="modal-item__radio button button__type__option" for="size-s">
+            <input class="visually-hidden button__input" type="radio" id="size-s" value="size-s" name="size" checked>
+            <span class="button__span">S</span>
+            <p class="button__text">${product.sizes.s.size}</p>
+            <div class="button__bg"></div>
+          </label>
+          <label class="modal-item__radio button button__type__option" for="size-m">
+            <input class="visually-hidden button__input" type="radio" id="size-m" value="size-m" name="size">
+            <span class="button__span">M</span>
+            <p class="button__text">${product.sizes.m.size}</p>
+            <div class="button__bg"></div>
+          </label>
+          <label class="modal-item__radio button button__type__option" for="size-l">
+            <input class="visually-hidden button__input" type="radio" id="size-l" value="size-l" name="size">
+            <span class="button__span">L</span>
+            <p class="button__text">${product.sizes.l.size}</p>
+            <div class="button__bg"></div>
+          </label>
+        </div>
+      </div>
+      <div class="modal-item__additives">
+        <p class="modal-item__subtitle">Additives</p>
+        <div class="modal-item__labels text-button">
+          <label class="modal-item__radio button button__type__option" for="additives-1">
+            <input class="visually-hidden button__input" type="checkbox" id="additives-1" value="additives-1" name="additives">
+            <span class="button__span">1</span>
+            <p class="button__text">${product.additives[0].name}</p>
+            <div class="button__bg"></div>
+          </label>
+          <label class="modal-item__radio button button__type__option" for="additives-2">
+            <input class="visually-hidden button__input" type="checkbox" id="additives-2" value="additives-2" name="additives">
+            <span class="button__span">2</span>
+            <p class="button__text">${product.additives[1].name}</p>
+            <div class="button__bg"></div>
+          </label>
+          <label class="modal-item__radio button button__type__option" for="additives-3">
+            <input class="visually-hidden button__input" type="checkbox" id="additives-3" value="additives-3" name="additives">
+            <span class="button__span">3</span>
+            <p class="button__text">${product.additives[2].name}</p>
+            <div class="button__bg"></div>
+          </label>
+        </div>
+      </div>
+      <div class="modal-item__total-price text-h3">
+        <p class="modal-item__total">Total:</p>
+        <p class="modal-item__price">$${product.price}</p>
+      </div>
+      <p class="modal-item__notice text-caption">The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</p>
+      <div class="modal-item__button" id="modal-close">Close</div>
+    </form>
+  </article>
+  `;
+  modal.innerHTML = modalContent;
+};
+
+function modalOpen() {
+  modalWrapper.classList.remove('modal__hidden');
+  page.classList.add('lock');
+
+  let modalCloseButton = document.getElementById('modal-close');
+  modalCloseButton.addEventListener('click', function() {
+    modalClose();
+  });
+}
+
+function modalClose() {
+  modalWrapper.classList.add('modal__hidden');
+  page.classList.remove('lock');
+}
 
 // Добавление карточек в разметку из JSON
 function showProducts(filter) {
@@ -115,18 +237,4 @@ function showCardsMobile() {
   for (let i = 0; i < menuItems.length; i++) {
     menuItems[i].classList.remove('menu-item__hidden');
   }
-}
-
-function burgerMenuOpen () {
-  burger.classList.add('burger__open');
-  navMain.classList.add('active');
-  navMenu.classList.add('active');
-  page.classList.add('lock');
-}
-
-function burgerMenuClose () {
-  burger.classList.remove('burger__open');
-  navMain.classList.remove('active');
-  navMenu.classList.remove('active');
-  page.classList.remove('lock');
 }

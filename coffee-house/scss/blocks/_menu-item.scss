@@ -1,0 +1,56 @@
+.menu-item {
+  overflow: hidden;
+  width: 100%;
+  max-width: 310px;
+  outline: 1px solid $brd-light;
+  border-radius: 40px;
+  cursor: pointer;
+      
+  &:hover > .menu-item__image img {
+    scale: 1;
+
+    @media (max-width: 768px) {
+      scale: 1.1;
+    }
+  }
+
+  &__hidden {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    cursor: auto;
+  }
+}
+.menu-item__coffee {
+}
+.menu-item__image {
+  width: 100%;
+  height: auto;
+  max-width: 310px;
+  border-radius: 40px;
+  overflow: hidden;
+
+  img {
+    display: flex;
+    object-fit: cover;
+    object-position: center;
+    scale: 1.1;
+    transition: all 0.3s ease;
+  }
+}
+.menu-item__info {
+  padding: 20px;
+}
+.menu-item__title {
+  margin: 0 0 12px;
+}
+.menu-item__description {
+  height: 72px;
+  margin: 0 0 12px;
+}
+.menu-item__price {
+  margin: 0;
+}

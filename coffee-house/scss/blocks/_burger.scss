@@ -1,0 +1,49 @@
+.burger {
+  position: absolute;
+  top: 50%;
+  right: -1px;
+  transform: translateY(-50%);
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  border: 1px solid $brd-dark;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 14px;
+    width: 16px;
+    height: 1.5px;
+    background-color: $txt-dark;
+    transition: all 0.3s ease;
+  }
+  &::before {
+    top: 17px; // padding-burger
+  }
+  &::after {
+    top: calc(17px + 8px); // padding-burger + margin
+  }
+  
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.burger__open {
+  &::before {
+    top: 21px;
+    transform: rotate(-45deg);
+    transition: all 0.3s ease;
+  }
+  &::after {
+    top: 21px;
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+  }
+
+}
+.burger__close {
+}

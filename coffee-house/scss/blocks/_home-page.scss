@@ -1,0 +1,91 @@
+.home-page {
+  margin-bottom: 100px;
+}
+.home-page__container {
+  position: relative;
+  height: 644px;
+  border-radius: 40px;
+  overflow: hidden;
+    
+  @media (max-width: 425px) {
+    height: 552px;
+  }
+}
+.home-page__video {
+  width: 100%;
+  height: 644px;
+  max-width: 1360px;
+  object-fit: cover;
+  
+  @media (max-width: 425px) {
+    height: 552px;
+  }
+}
+.home-page__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 100px;
+  width: 530px;
+  
+  @media (max-width: 768px) {
+    padding: 100px 60px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 690px) {
+    padding: 60px 16px;
+  }
+}
+.home-page__slogan {
+  margin: 0 0 40px;
+  color: $txt-light;
+  
+  span {
+    color: $txt-accent;
+  }
+}
+.home-page__text {
+  margin: 0 0 40px;
+  color: $txt-light;
+}
+.home-page__button {
+}
+.home-page__link {
+  position: relative;
+  display: inline-block;
+  padding: 20px 78px;
+  border-radius: 100px;
+  text-decoration: none;
+  color: $txt-dark;
+  background-color: $bg-body;
+  transition: padding 0.3s ease;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 22px;
+    right: 64px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../icon/icon-coffee-cup.svg');
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  &:hover {
+    padding: 20px calc(78px + 14px) 20px calc(78px - 14px);
+    &::after {
+    opacity: 1;
+    }
+  }
+      
+  @media (max-width: 768px) {
+    padding: 20px calc(78px + 14px) 20px calc(78px - 14px);
+    cursor:auto;
+    &::after {
+    opacity: 1;
+    }
+  }
+}

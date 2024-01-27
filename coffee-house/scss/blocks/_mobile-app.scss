@@ -1,0 +1,65 @@
+.mobile-app {
+  margin-bottom: 100px;
+}
+.mobile-app__container {
+  display: flex;
+  column-gap: 100px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    row-gap: 100px;
+  }
+
+  @media (max-width: 425px) {
+    row-gap: 40px;
+  }
+}
+.mobile-app__title {
+}
+.mobile-app__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  
+  @media (max-width: 768px) {
+    align-items: center;
+    width: 100%;
+    }
+  }
+  .mobile-app__subtitle {
+    margin: 0 0 40px;
+    
+    span {
+      color: $txt-accent;
+    }
+  }
+  .mobile-app__description {
+    margin: 0 0 40px;
+  }
+  .mobile-app__action {
+    display: flex;
+    column-gap: 20px;
+    
+    @media (max-width: 768px) {
+      align-self: flex-start;
+    }
+    
+    @media (max-width: 500px) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+}
+.mobile-app__button {
+}
+.mobile-app__image {
+  width: 100%;
+  max-width: 630px;
+  height: auto;
+    
+  img {
+    display: flex;
+    object-fit: contain;
+    object-position: center;
+  }
+}

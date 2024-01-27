@@ -1,0 +1,29 @@
+.page {
+  height: 100%;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $txt-dark;
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  display: grid;
+  align-content: start;
+  grid-template-rows: min-content 1fr min-content;
+  height: 100%;
+  margin: 0;
+  padding: 20px 40px 0;
+  box-sizing: border-box;
+  background-color: $bg-body;
+  
+  @media (max-width: 425px) {
+    padding: 20px 16px 0;
+  }
+
+  &.lock {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,81 @@
+.modal-item {
+  display: flex;
+  column-gap: 20px;
+  width: 100%;
+}
+.modal-item__image {
+  flex-shrink: 0;
+  height: auto;
+  max-width: 310px;
+  overflow: hidden;
+  
+  img {
+    display: flex;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 40px;
+  }
+}
+.modal-item__info {
+}
+.modal-item__title {
+  margin: 0 0 12px;
+}
+.modal-item__description {
+  margin: 0 0 20px;
+}
+.modal-item__subtitle {
+  margin: 0 0 8px;
+}
+.modal-item__labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.modal-item__size {
+  margin: 0 0 20px;
+}
+.modal-item__label {
+}
+.modal-item__radio {
+}
+.modal-item__additives {
+  margin: 0 0 20px;
+}
+.modal-item__check {
+}
+.modal-item__total-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 20px;
+}
+.modal-item__total {
+  margin: 0;
+}
+.modal-item__price {
+  margin: 0;
+}
+.modal-item__notice {
+  position: relative;
+  margin: 0 0 20px 24px;
+  padding: 12px 0;
+  border-top: 1px solid $brd-light;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 16px;
+    left: calc(-16px - 8px);
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M8 7.66663V11' stroke='%23403F3D' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 5.00667L8.00667 4.99926' stroke='%23403F3D' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.99967 14.6667C11.6816 14.6667 14.6663 11.6819 14.6663 8.00004C14.6663 4.31814 11.6816 1.33337 7.99967 1.33337C4.31778 1.33337 1.33301 4.31814 1.33301 8.00004C1.33301 11.6819 4.31778 14.6667 7.99967 14.6667Z' stroke='%23403F3D' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cdefs%3E%3CclipPath id='clip0_268_12877'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  }
+}
+.modal-item__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 78px;
+  border-radius: 100px;
+  border: 1px solid $brd-dark;
+}

@@ -1,0 +1,42 @@
+.socials {
+}
+.socials__list {
+  display: flex;
+  column-gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.socials__item {
+}
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid $brd-light;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $bg-body;
+
+    path {
+      stroke: $txt-dark;
+      transition: all 0.3s ease;
+    }
+    
+    @media (max-width: 768px) {
+      background-color: transparent;
+  
+      path {
+        stroke: $txt-light;
+      }
+    }
+  }
+        
+  @media (max-width: 768px) {
+    cursor:auto;
+  }
+}

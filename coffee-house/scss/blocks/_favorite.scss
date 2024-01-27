@@ -1,0 +1,23 @@
+.favorite-coffee {
+  margin-bottom: 100px;
+}
+.favorite-coffee__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.favorite-coffee__title {
+}
+.favorite-coffee__subtitle {
+  margin: 0 0 40px;
+
+  span {
+    color: $txt-accent;
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
+.favorite-coffee__slider {
+}
